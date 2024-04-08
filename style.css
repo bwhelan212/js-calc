@@ -1,0 +1,29 @@
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display:flex;
+    flex-direction:column;
+
+}
+
+#calculator{
+    display: flex;
+    flex-direction:column;
+    width: 20 px;
+    height: 20 px; 
+    border: 1px solid black;
+}
+
+#display {
+    background-color:lightgray;
+    width: 60px;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left:5px;
+}
