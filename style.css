@@ -8,22 +8,43 @@ body{
 .container {
     display:flex;
     flex-direction:column;
+    justify-content: center;
+    
 
 }
 
 #calculator{
     display: flex;
     flex-direction:column;
-    width: 20 px;
-    height: 20 px; 
-    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    height:370px;
+    width:300px;
+    border: thick double #32a1ce;
+    border-radius: 30px;
 }
 
-#display {
+.display {
     background-color:lightgray;
-    width: 60px;
+    width: 270px;
+    height:35px;
+    font-size:30px;
+    text-align:right;
     border: 1px solid black;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left:5px;
+}
+
+#button_area {
+    display: flex;
+    flex-wrap: wrap;
+    /*flex:1;*/
+    justify-content: center;
+    align-items: center;
+}
+
+#zero,#one,#two,#three,#four,#five,#six,#seven,#eight,#nine,#plus,#minus,#times,#divide,#equals,#clear {
+    height:70px;
+    width:70px;
 }
