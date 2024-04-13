@@ -179,36 +179,66 @@ buttonNine.addEventListener("click", () => {
 
 
 plus.addEventListener("click", () => {
-    if (operator != '') {
-        operator = '';
+    if (operator == '') {
+        operator = '+';
+        display.textContent = display.textContent + ' ' + operator;
+    } else {
+        operate(num1,operator,num2);
+        operator = '+';
+        num1=display.textContent;
+        display.textContent += operator;
+        //num1 = multiply(num1,num2);
+        //display.textContent= num1 + operator;
+        num2='';
     }
-    operator = '+';
-    display.textContent = display.textContent + ' ' + operator;
-    //operate(num1, operator, num2);
 });
 
 minus.addEventListener("click", ()=> {
-    if (operator != '') {
-        operator = '';
+    if (operator == '') {
+        operator = '-';
+        display.textContent = display.textContent + ' ' + operator;
+    } else {
+        operate(num1,operator,num2);
+        operator = '-';
+        num1=display.textContent;
+        display.textContent += operator;
+        //num1 = multiply(num1,num2);
+        //display.textContent= num1 + operator;
+        num2='';
     }
-    operator = '-';
-    display.textContent = display.textContent + ' ' + operator;
+   
 });
 
 times.addEventListener("click", ()=> {
-    if (operator != '') {
-        operator = '';
+    if (operator == '') {
+        operator = '*';
+        display.textContent = display.textContent + ' ' + operator;
+    } else {
+        operate(num1,operator,num2);
+        operator = '*';
+        num1=display.textContent;
+        display.textContent += operator;
+        //num1 = multiply(num1,num2);
+        //display.textContent= num1 + operator;
+        num2='';
     }
-    operator = '*';
-    display.textContent = display.textContent + ' ' + operator;
+   
 });
 
 division.addEventListener("click", ()=> {
-    if (operator != '') {
-        operator = '';
+    if (operator == '') {
+        operator = '/';
+        display.textContent = display.textContent + ' ' + operator;
+    } else {
+        operate(num1,operator,num2);
+        operator = '/';
+        num1=display.textContent;
+        display.textContent += operator;
+        //num1 = multiply(num1,num2);
+        //display.textContent= num1 + operator;
+        num2='';
     }
-    operator = '/';
-    display.textContent = display.textContent + ' ' + operator;
+   
 });
 
 
@@ -227,7 +257,8 @@ function operate(num1, operator, num2){
 equals.addEventListener("click", () => {
     operate(num1, operator, num2);
     num1 = display.textContent;
-    num2 =''
+    num2 ='';
+    operator='';
 });
 
 clear_button.addEventListener("click", () => {
